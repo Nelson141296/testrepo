@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Accounts with Contacts">
+        <template if:true={accounts}>
+            <lightning-datatable
+                key-field="id"
+                data={accounts}
+                columns={columns}
+                hide-checkbox-column="true">
+            </lightning-datatable>
+        </template>
+        <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+        </template>
+    </lightning-card>
+</template>
